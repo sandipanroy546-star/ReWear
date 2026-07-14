@@ -8,7 +8,7 @@
    Backend Configuration
 ============================ */
 
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://rewear-1-i4pl.onrender.com/api";
 
 
 /* ============================
