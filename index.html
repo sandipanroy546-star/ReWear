@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear | Clothing Exchange & Swap Marketplace</title>
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/new_logo.png" alt="ReWear">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#popular-listings">Browse Listings</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="your_listings.html">Your Listings</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="login-btn"  onclick="openModal()">Login</button>
+            <button class="register-btn" onclick="openRegister()">
+                Register
+            </button>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div class="hero-sec" id="home">
+        <h1>Exchange Clothes.</h1>
+        <h2>Reduce Waste.</h2>
+        <h3>Refresh Your Style.</h3>
+        <p>
+            Give your clothes a second life and discover 
+           <span>amazing style from your community.</span>
+        </p>
+        <div class="hero-buttons">
+            <button class="start-btn" onclick="window.location.href='#popular-listings'">Start Swapping</button>
+            <button class="browse-btn" onclick="window.location.href='listing.html'">Browse Items</button>
+        </div>
+    </div>
+    <div class="shop">
+        <h3>Shop by Category</h3>
+        <a href="categories.html">View all categories</a>
+    </div>
+    <div class="container1 reveal">
+        <div class="container2">
+            <img src="assets/girls wer.png" alt="Women's Wear">
+            <h5>Women's Wear</h5>
+            <p>2,345 items</p>
+        </div>
+        <div class="container3">
+            <img src="assets/mens wear.png" alt="Men's Wear">
+            <h5>Men's Wear</h5>
+            <p>1,992 items</p>
+        </div>
+        <div class="container4">
+            <img src="assets/kids wear.png" alt="Kid's Wear">
+            <h5>Kid's Wear</h5>
+            <p>963 items</p>
+        </div>
+        <div class="container5">
+            <img src="assets/jacket.png" alt="Jackets">
+            <h5>Jackets</h5>
+            <p>1,246 items</p>
+        </div>
+        <div class="container6">
+            <img src="assets/shoes.png" alt="Shoes">
+            <h5>Shoes</h5>
+            <p>843 items</p>
+        </div>   
+        <div class="container7">
+            <img src="assets/accessories.png" alt="Accessories">
+            <h5>Accessories</h5>
+            <p>1,245 items</p>
+        </div>                  
+    </div>
+    <section class="impact-section">
+    <div class="impact-left">
+        <h2>Our Impact</h2>
+        <p>Together we're creating<br>a sustainable future.</p>
+    </div>
+    <div class="impact-stats">
+        <div class="stat">
+            <div class="icon">👥</div>
+            <h3>12,560+</h3>
+            <p>Swaps Completed</p>
+        </div>
+        <div class="stat">
+            <div class="icon">👕</div>
+            <h3>25,430+</h3>
+            <p>Clothes Saved<br>from Landfill</p>
+        </div>
+        <div class="stat">
+            <div class="icon">⭐</div>
+            <h3>8,920+</h3>
+            <p>Active Members</p>
+        </div>
+        <div class="stat">
+            <div class="icon">📷</div>
+            <h3>120+</h3>
+            <p>Cities Connected</p>
+        </div>
+    </div>
+</section>
+<section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <p class="subtitle">
+        Four simple steps to start your sustainable fashion journey
+    </p>
+    <div class="steps">
+
+        <div class="step">
+            <div class="icon-circle">☁️</div>
+            <h3>1. Upload Clothes</h3>
+            <p>List the clothes you no longer use.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">
+            <div class="icon-circle">🔍</div>
+            <h3>2. Browse Items</h3>
+            <p>Find items you love from others.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">
+            <div class="icon-circle">🔄</div>
+            <h3>3. Send Swap Request</h3>
+            <p>Send a request to exchange items.</p>
+        </div>
+
+        <div class="arrow">→</div>
+
+        <div class="step">
+            <div class="icon-circle">✔️</div>
+            <h3>4. Exchange & Enjoy</h3>
+            <p>Ship or meet up and enjoy your new style!</p>
+        </div>
+    </div>
+</section>
+<div class="popular-listing" id="popular-listings">
+        <h3>Popular Listings</h3>
+        <a href="listing.html">View all listings</a>
+    </div>
+    <div class="container8 reveal">
+        <div class="container9">
+            <img src="assets/denim_jacket.png" alt="Levi's Denim Jacket">
+            <h5>Denim Jacket</h5>
+            <p>Levi's</p>
+            <p>Size- M</p>
+            <p>Location- Mumbai</p>
+            <p class="value">₹ 80 Value</p>
+        </div>
+        <div class="container10">
+            <img src="assets/pink_hoodie.png" alt="Zara Pink Hoodie">
+            <h5>Hoodie</h5>
+            <p>Zara</p>
+            <p>Size- L</p>
+            <p>Location- Delhi</p>
+            <p class="value">₹ 70 Value</p>
+        </div>
+        <div class="container11">
+            <img src="assets/floral_dress.png" alt="H&M Floral Dress">
+            <h5>Floral Dress</h5>
+            <p>H&M</p>
+            <p>Size- S</p>
+            <p>Location- Bangalore</p>
+            <p class="value">₹ 60 Value</p>
+        </div>
+        <div class="container12">
+            <img src="assets/white_sneakers.png" alt="Nike White Sneakers">
+            <h5>Sneakers</h5>
+            <p>Nike</p>
+            <p>Size- 42</p>
+            <p>Location- Pune</p>
+            <p class="value">₹ 90 Value</p>
+        </div>
+        <div class="container13">
+            <img src="assets/brown_bagpack.png" alt="Wildcraft Brown Bagpack">
+            <h5>Bagpack</h5>
+            <p>Wildcraft</p>
+            <p>Quality- Good</p>
+            <p>Location- Chennai</p>
+            <p class="value">₹ 50 Value</p>
+        </div>   
+        <div class="container14">
+            <img src="assets/olive_green_shirt.png" alt="Uniqlo Olive Green Shirt">
+            <h5>Shirt</h5>
+            <p>Uniqlo</p>
+            <p>Size- M</p>
+            <p>Location- Hyderabad</p>
+            <p class="value">₹ 40 Value</p>
+        </div>                  
+    </div>
+    <section class="testimonials" id="community">
+
+    <h2>What Our Community Says</h2>
+
+    <div class="testimonial-container">
+
+        <div class="testimonial-card">
+            <img src="assets/young_professional_male.png" alt="Ayush S. profile">
+            <div class="content">
+                <p>
+                    "ReWear helped me give my old clothes a new home and find amazing pieces in return!"
+                </p>
+                <h4>Ayush S.</h4>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <img src="assets/young_woman.png" alt="Priya M. profile">
+            <div class="content">
+                <p>
+                    "A perfect platform for sustainable living. Love the community and the concept!"
+                </p>
+                <h4>Priya M.</h4>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="assets/bearded_male.png" alt="Rahul R. profile">
+            <div class="content">
+                <p>
+                    "I found a premium jacket that I love and swapped a shirt I didn't wear anymore."
+                </p>
+                <h4>Rahul R.</h4>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal" id="loginModal">
+
+    <form class="login-container" id="login">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <div class="left-panel">
+
+            <img src="assets/new_logo.png" class="login-logo">
+
+            <img src="assets/login_new.png" class="illustration">
+
+            <h2>Welcome Back!</h2>
+
+            <p>
+                Log in to continue your sustainable fashion journey.
+            </p>
+
+        </div>
+
+        <div class="right-panel">
+
+            <h1>Login</h1>
+
+            <p class="login-subtitle">
+                Welcome back! Please login to continue.
+            </p>
+            <label >Email or Username</label>
+            <small class="error" id="emailError"></small>
+            <input type="text" id="email" placeholder="Enter your email">
+
+            <div class="password-row">
+                <small class="error" id="passwordError"></small>
+                <label>Password</label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <input type="password" id="password" placeholder="Enter your password">
+            <small class="error" id="passwordError"></small>
+            <button type="submit" class="login-submit" id="loginBtn" >
+                Login
+            </button>
+            <div id="msg"></div>
+
+            <div class="divider">
+                <span>or</span>
+            </div>
+
+            <button class="social-btn">
+                Continue with Google
+            </button>
+
+            <button class="social-btn">
+                Continue with Facebook
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Logo Section -->
+        <div class="footer-col footer-logo">
+            <p>
+                ReWear is a community-driven platform that promotes sustainable fashion through clothing exchange.
+            </p>
+
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Browse Listings</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Safety Tips</a></li>
+                <li><a href="#">Shipping Guide</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Impact</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Press</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col newsletter">
+            <h3>Newsletter</h3>
+
+            <p>
+                Stay updated with our latest news and swaps.
+            </p>
+
+            <div class="newsletter-box">
+                <input type="email" placeholder="Enter your email">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-bottom">
+        <p>© 2026 ReWear. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
+</footer>
+<div class="register-modal" id="registerModal">
+
+    <form class="register-container" id="register">
+
+        <span class="close-btn" onclick="closeRegister()">
+            &times;
+        </span>
+
+        <div class="register-left">
+
+            <img src="assets/register.png"
+                 class="register-img">
+
+            <h2>Join ReWear</h2>
+
+            <p>
+                Create your account and start swapping clothes.
+            </p>
+
+        </div>
+
+        <div class="register-right">
+
+            <h1>Create Account</h1>
+            <div id="message"></div>
+
+            
+            <label>Full Name</label>
+            <div class="error" id="fullname_error"></div>
+            <input type="text" id="fullname" placeholder="Enter Name">
+            
+
+            <label>Email</label>
+            <div class="error" id="email_error"></div>
+            <input type="email" id="reg-email" placeholder="Enter Email">
+            
+
+            <label>Password</label>
+            <div class="error" id="password_error"></div>
+            <input type="password" id="reg-pass" placeholder="Enter Password">
+            
+            <label>Confirm Password</label>
+            <div class="error" id="confirm_error"></div>
+            <input type="password"  id="confirm" placeholder="Confirm Password">
+            
+            <button type="submit" class="register-submit">
+                Register
+            </button>
+
+        </div>
+
+    </form>
+
+    </div>
+
+    <!-- Swap Request Modal -->
+    <div class="swap-modal" id="swapModal">
+        <div class="swap-modal-content">
+            <span class="close" onclick="closeSwapModal()">&times;</span>
+            <div class="swap-modal-header">
+                <h2>Swap Request</h2>
+            </div>
+            <div class="swap-modal-body">
+                <div class="swap-comparison">
+                    <div class="item-preview">
+                        <img src="" alt="Target Item" class="target-item-img">
+                        <p class="target-item-name" style="font-weight: 600;"></p>
+                        <p class="target-item-value" style="color: #6f2c91; font-size: 14px;"></p>
+                    </div>
+                    <div class="swap-icon-mid">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="item-preview">
+                        <div class="select-your-item">
+                            <i class="fas fa-plus" style="font-size: 24px; margin-bottom: 10px; color: #aaa;"></i>
+                            <p style="font-size: 14px; color: #888;">Select your item to swap</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="confirm-swap-btn" onclick="confirmSwapRequest()">Confirm Swap Request</button>
+            </div>
+        </div>
+    </div>
+
+<script src="common.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

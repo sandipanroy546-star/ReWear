@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear | All Clothing Categories</title>
+    <meta name="description" content="Explore all clothing categories on ReWear. Swap style, save planet. Find your next favorite outfit today.">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" id="home-logo">
+                <img src="assets/new_logo.png" alt="">
+            </a>
+
+            <nav class="nav-desktop">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="listing.html" class="nav-link">Swap Shop</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How it Works</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-search">
+                <span class="search-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input type="text" placeholder="Search categories..." class="search-input" id="main-search">
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section class="banner">
+        <div class="container">
+            <h1 class="banner-title">Browse Categories</h1>
+            <p class="banner-subtitle">Find what you love, trade what you don't.</p>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span>></span>
+                <span class="active">Categories</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h2 class="filter-title">Filters</h2>
+                    <label class="filter-label">Sort By</label>
+                    <select class="filter-select" id="sort-select">
+                        <option value="popular">Most Popular</option>
+                        <option value="items">Item Count</option>
+                        <option value="new">Newly Added</option>
+                    </select>
+                </div>
+
+                <div class="filter-section">
+                    <label class="filter-label">Availability</label>
+                    <div class="filter-group">
+                        <label class="checkbox-item"><input type="checkbox" checked> In Stock</label>
+                        <label class="checkbox-item"><input type="checkbox"> Coming Soon</label>
+                    </div>
+                </div>
+
+                <div class="filter-section">
+                    <label class="filter-label">Estimated Value</label>
+                    <div class="range-container">
+                        <input type="range" min="0" max="500" value="500" class="price-range" id="price-slider">
+                        <div class="range-labels">
+                            <span>Rs.0</span>
+                            <span id="price-display">Rs.500+</span>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </aside>
+
+            <!-- Content Area -->
+            <section class="content-area">
+                <div class="grid-header">
+                    <div class="results-count">
+                        Explore all <span>6</span> categories
+                    </div>
+                </div>
+
+                <div class="category-grid">
+                    <!-- Women's Wear -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/womens_wear.png" alt="Women's Wear" class="category-img">
+                            <div class="category-icon-badge">👗</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Women's Wear</h3>
+                            <span class="category-count">2,345 items</span>
+                            <a href="category_detailed.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Men's Wear -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/mens_wear.png" alt="Men's Wear" class="category-img">
+                            <div class="category-icon-badge">👕</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Men's Wear</h3>
+                            <span class="category-count">1,992 items</span>
+                            <a href="category_men.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Kids' Wear -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/kids_wear.png" alt="Kids' Wear" class="category-img">
+                            <div class="category-icon-badge">🧸</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Kids' Wear</h3>
+                            <span class="category-count">1,112 items</span>
+                            <a href="category_kids.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Shoes -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/shoes.png" alt="Shoes" class="category-img">
+                            <div class="category-icon-badge">👟</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Footwear</h3>
+                            <span class="category-count">843 items</span>
+                            <a href="category_shoes.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Accessories -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/accessories2.png" alt="Accessories" class="category-img">
+                            <div class="category-icon-badge">👜</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Accessories</h3>
+                            <span class="category-count">1,245 items</span>
+                            <a href="category_accessories.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+
+                    <!-- Winter Wear -->
+                    <article class="category-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/jackets.png" alt="Winter Wear" class="category-img">
+                            <div class="category-icon-badge">🧥</div>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="category-name">Winter Wear</h3>
+                            <span class="category-count">560 items</span>
+                            <a href="category_jacket.html" class="explore-link">Explore →</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="login-container">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="left-panel">
+                <img src="assets/new_logo.png" class="login-logo">
+                <h2>Welcome Back!</h2>
+                <p>Log in to continue swapping.</p>
+            </div>
+            <div class="right-panel">
+                <h1>Login</h1>
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="login-submit" onclick="goHome()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="register-modal" id="registerModal">
+        <div class="register-container">
+            <span class="close-btn" onclick="closeRegister()">&times;</span>
+            <div class="register-left">
+                <h2>Join ReWear</h2>
+            </div>
+            <div class="register-right">
+                <h1>Register</h1>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="register-submit" onclick="goToLogin()">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swap Request Modal -->
+    <div class="swap-modal" id="swapModal">
+        <div class="swap-modal-content">
+            <span class="close" onclick="closeSwapModal()">&times;</span>
+            <div class="swap-modal-header">
+                <h2>Swap Request</h2>
+            </div>
+            <div class="swap-modal-body">
+                <div class="swap-comparison">
+                    <div class="item-preview">
+                        <img src="" alt="Target Item" class="target-item-img">
+                        <p class="target-item-name" style="font-weight: 600;"></p>
+                        <p class="target-item-value" style="color: #6f2c91; font-size: 14px;"></p>
+                    </div>
+                    <div class="swap-icon-mid">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="item-preview">
+                        <div class="select-your-item">
+                            <i class="fas fa-plus" style="font-size: 24px; margin-bottom: 10px; color: #aaa;"></i>
+                            <p style="font-size: 14px; color: #888;">Select your item to swap</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="confirm-swap-btn" onclick="confirmSwapRequest()">Confirm Swap Request</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="categories.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and manage your clothing swap listings and transaction history on ReWear. Track the status of sent swap requests in real time.">
+    <title>Your Listings | ReWear - Clothing Swap History</title>
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="your_listings.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar (Matches index.html exactly) -->
+    <nav class="navbar" id="main-nav">
+        <div class="logo">
+            <img src="assets/new_logo.png" alt="ReWear">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="listing.html">Browse Listings</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#community">Community</a></li>
+            <li><a href="your_listings.html" class="active" id="active-nav-link">Your Listings</a></li>
+        </ul>
+        <div class="nav-buttons">
+            <button class="login-btn" onclick="openModal()" id="nav-login-btn">Login</button>
+            <button class="register-btn" onclick="openRegister()" id="nav-register-btn">Register</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header / Banner Section -->
+    <header class="banner-sec" id="listings-header">
+        <div class="banner-gradient"></div>
+        <h1 class="banner-title" id="page-title">Your Listings</h1>
+        <p class="banner-subtitle">Manage and track your outgoing clothing swap requests</p>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#" class="active">Your Listings</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="listings-main-container">
+        <!-- Control Bar -->
+        <section class="controls-bar" aria-label="Listings sorting and filtering">
+            <div class="listings-summary-count" id="summary-count">
+                Showing <span class="highlight-count" id="request-count">0</span> swap requests
+            </div>
+            <div class="sorting-options">
+                <label for="user-view" class="sort-label">View As:</label>
+                <select id="user-view" class="sort-select" onchange="switchActiveUser(this.value)">
+                    <option value="You">You (Requester)</option>
+                    <option value="Sarah J.">Sarah J. (Owner)</option>
+                    <option value="Mike R.">Mike R. (Owner)</option>
+                    <option value="Aman T.">Aman T. (Owner)</option>
+                    <option value="Priya K.">Priya K. (Owner)</option>
+                    <option value="David L.">David L. (Owner)</option>
+                    <option value="Neha S.">Neha S. (Owner)</option>
+                    <option value="Komal P.">Komal P. (Owner)</option>
+                    <option value="Rahul M.">Rahul M. (Owner)</option>
+                </select>
+
+                <label for="sort-requests" class="sort-label">Sort By:</label>
+                <select id="sort-requests" class="sort-select" onchange="loadAndRenderListings()">
+                    <option value="newest">Newest Request</option>
+                    <option value="oldest">Oldest Request</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="status">Status: Pending First</option>
+                </select>
+                <button class="clear-all-btn" id="clear-all-listings-btn" onclick="clearAllSwaps()" title="Clear Swap History">
+                    <i class="fas fa-trash-alt"></i> Clear History
+                </button>
+            </div>
+        </section>
+
+        <!-- Dynamic Grid / Container -->
+        <section class="listings-grid-section" id="listings-section">
+            <!-- Empty State Container -->
+            <div id="empty-state" class="empty-state-wrapper">
+                <div class="empty-state-icon">🔄</div>
+                <h2>No listings found</h2>
+                <p>You haven't requested any swaps yet. Browse our marketplace to find items to trade!</p>
+                <a href="listing.html" class="browse-cta-btn" id="shop-cta">Browse Items</a>
+            </div>
+
+            <!-- Grid for Cards -->
+            <div id="listings-dynamic-grid" class="listings-dynamic-grid" style="display: none;">
+                <!-- Cards will be dynamically injected here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Matches index.html exactly) -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-col footer-logo">
+                <p>
+                    ReWear is a community-driven platform that promotes sustainable fashion through clothing exchange.
+                </p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="listing.html">Browse Listings</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Safety Tips</a></li>
+                    <li><a href="#">Shipping Guide</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Impact</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col newsletter">
+                <h3>Newsletter</h3>
+                <p>
+                    Stay updated with our latest news and swaps.
+                </p>
+                <div class="newsletter-box">
+                    <input type="email" placeholder="Enter your email" aria-label="Newsletter email">
+                    <button type="button">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <p>© 2026 ReWear. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals (Loaded for login/register compatibility) -->
+    <div class="modal" id="loginModal">
+        <form class="login-container" id="login">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="left-panel">
+                <img src="assets/new_logo.png" class="login-logo" alt="ReWear logo">
+                <img src="assets/login_new.png" class="illustration" alt="Login illustration">
+                <h2>Welcome Back!</h2>
+                <p>Log in to continue your sustainable fashion journey.</p>
+            </div>
+            <div class="right-panel">
+                <h1>Login</h1>
+                <p class="login-subtitle">Welcome back! Please login to continue.</p>
+                <label for="email">Email or Username</label>
+                <small class="error" id="emailError"></small>
+                <input type="text" id="email" placeholder="Enter your email">
+                <div class="password-row">
+                    <label for="password">Password</label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <small class="error" id="passwordError"></small>
+                <input type="password" id="password" placeholder="Enter your password">
+                <button type="submit" class="login-submit">Login</button>
+                <div id="msg"></div>
+                <div class="divider"><span>or</span></div>
+                <button type="button" class="social-btn">Continue with Google</button>
+                <button type="button" class="social-btn">Continue with Facebook</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="register-modal" id="registerModal">
+        <form class="register-container" id="register">
+            <span class="close-btn" onclick="closeRegister()">&times;</span>
+            <div class="register-left">
+                <img src="assets/register.png" class="register-img" alt="Register illustration">
+                <h2>Join ReWear</h2>
+                <p>Create your account and start swapping clothes.</p>
+            </div>
+            <div class="register-right">
+                <h1>Create Account</h1>
+                <div id="message"></div>
+                <label for="fullname">Full Name</label>
+                <div class="error" id="fullname_error"></div>
+                <input type="text" id="fullname" placeholder="Enter Name">
+                <label for="reg-email">Email</label>
+                <div class="error" id="email_error"></div>
+                <input type="email" id="reg-email" placeholder="Enter Email">
+                <label for="reg-pass">Password</label>
+                <div class="error" id="password_error"></div>
+                <input type="password" id="reg-pass" placeholder="Enter Password">
+                <label for="confirm">Confirm Password</label>
+                <div class="error" id="confirm_error"></div>
+                <input type="password" id="confirm" placeholder="Confirm Password">
+                <button type="submit" class="register-submit">Register</button>
+            </div>
+        </form>
+    </div>
+    
+
+    <!-- Scripts -->
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+    <script src="your_listings.js"></script>
+</body>
+</html>

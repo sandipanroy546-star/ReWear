@@ -1,0 +1,358 @@
+/* Modal Styles for ReWear project */
+
+.modal, .register-modal, .swap-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 5000;
+}
+
+.register-modal {
+    z-index: 6000;
+}
+
+.swap-modal {
+    z-index: 7000;
+}
+
+.login-container, .register-container, .swap-modal-content {
+    background: white;
+    border-radius: 20px;
+    overflow:hidden;
+    display:flex;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,.25);
+    color: #333;
+}
+
+.login-container,
+.register-container {
+    width: 900px;
+    max-width: 900px;
+    min-height: 600px;
+}
+
+.swap-modal-content {
+    width: 600px;
+    max-width: 95%;
+    flex-direction: column;
+}
+
+.close, .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #666;
+    z-index: 10;
+}
+
+.left-panel, .register-left {
+    width: 45%;
+    background: #f7f0fc;
+    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-logo{
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.illustration{
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.left-panel h2, .register-left h2 {
+    color: #6f2c91;
+    margin-top: 20px;
+}
+
+.left-panel,
+.register-left{
+    flex: 1;
+}
+
+.right-panel,
+.register-right{
+    flex: 1;
+    padding: 50px 40px;
+}
+.social-btn{
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: 15px;
+    border: 2px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fff;
+    color: #444;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover{
+    background: #f7f0fc;
+    border-color: #6f2c91;
+    color: #6f2c91;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(111, 44, 145, 0.15);
+}
+
+.social-btn:active{
+    transform: scale(0.98);
+}
+.divider{
+    display: flex;
+    align-items: center;
+    margin: 25px 0 10px;
+}
+
+.divider::before,
+.divider::after{
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span{
+    padding: 0 15px;
+    color: #777;
+    font-size: 14px;
+}
+.register-container{
+    width: 900px;
+    max-width: 95%;
+    min-height: 600px;
+    display: flex;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.register-left{
+    flex: 1;
+    background: #f7f0fc;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.register-right{
+    flex: 1;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-img{
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.register-left h2{
+    color: #6f2c91;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.register-left p{
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.register-right h1{
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.register-right label{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.register-right input{
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.register-right input:focus{
+    outline: none;
+    border-color: #6f2c91;
+    box-shadow: 0 0 0 3px rgba(111,44,145,0.15);
+}
+
+.register-submit{
+    width: 100%;
+    padding: 15px;
+    background: #6f2c91;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.register-submit:hover{
+    background: #521743;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(111,44,145,0.3);
+}
+
+.right-panel input, .register-right input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.login-submit, .register-submit {
+    width: 100%;
+    padding: 14px;
+    background: #6f2c91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.login-submit:hover, .register-submit:hover {
+    background: #521743;
+}
+
+/* Swap Modal Specifics */
+.swap-modal-header {
+    background: #f8f6fb;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.swap-modal-body {
+    padding: 30px;
+    width: 100%;
+}
+
+.swap-comparison {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.item-preview {
+    flex: 1;
+    text-align: center;
+}
+
+.item-preview img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.swap-icon-mid {
+    font-size: 24px;
+    color: #6f2c91;
+}
+
+.select-your-item {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px dashed #ddd;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.select-your-item:hover {
+    border-color: #6f2c91;
+    background: #f7f0fc;
+}
+
+.confirm-swap-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #6f2c91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .login-container, .register-container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel, .register-left, .register-right, .swap-modal-content {
+        width: 100%;
+    }
+    .left-panel, .register-left {
+        display: none;
+    }
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+#msg{
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+   
+}
+#message{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}

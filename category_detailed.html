@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Wear | ReWear</title>
+    <meta name="description" content="Browse Women's Wear listings on ReWear. Swap your clothes for something new.">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="modals.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-link" id="home-logo">
+                <div class="logo-text">
+                    <img src="assets/new_logo.png" alt="">
+                </div>
+            </a>
+            <div class="header-search">
+                <span class="search-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </span>
+                <input type="text" placeholder="Search items..." class="search-input">
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Header -->
+    <section class="banner" id="category-banner">
+        <div class="container">
+            <h1 class="banner-title">Women's Wear</h1>
+            <p class="banner-subtitle">Explore 2,345 items available for swap.</p>
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span class="separator">></span>
+                <span class="active">Women's Wear</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="main-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-section">
+                    <h2 class="filter-title">Filters</h2>
+                    <label class="filter-label">Sort By</label>
+                    <select class="filter-select">
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Items Grid -->
+            <section class="content-area">
+                <div class="category-grid" id="items-container">
+                    <!-- Item 1 -->
+                    <article class="category-card item-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/womens1.avif" alt="Item" class="category-img">
+                            <div class="item-badge">New</div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="item-size">Size: M</span>
+                            </div>
+                            <h3 class="category-name">Vintage Floral Dress</h3>
+                            <span class="category-count">Value: Rs. 545</span>
+                            <div class="card-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Sarah J.</span>
+                                </div>
+                                <button class="btn-swap">Swap Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Item 2 -->
+                    <article class="category-card item-card">
+                        <div class="card-image-wrapper">
+                            <img src="assets2/womens2.avif" alt="Item" class="category-img">
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="item-size">Size: S</span>
+                            </div>
+                            <h3 class="category-name">Casual Winter Jacket</h3>
+                            <span class="category-count">Value: Rs. 800</span>
+                            <div class="card-footer">
+                                <div class="user-info">
+                                    <span class="user-name">Mike R.</span>
+                                </div>
+                                <button class="btn-swap">Swap Now</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal" id="loginModal">
+        <div class="login-container">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="left-panel">
+                <img src="assets/new_logo.png" class="login-logo">
+                <h2>Welcome Back!</h2>
+            </div>
+            <div class="right-panel">
+                <h1>Login</h1>
+                <input type="text" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="login-submit" onclick="goHome()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="register-modal" id="registerModal">
+        <div class="register-container">
+            <span class="close-btn" onclick="closeRegister()">&times;</span>
+            <div class="register-right">
+                <h1>Register</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button class="register-submit" onclick="goToLogin()">Register</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swap Request Modal -->
+    <div class="swap-modal" id="swapModal">
+        <div class="swap-modal-content">
+            <span class="close" onclick="closeSwapModal()">&times;</span>
+            <div class="swap-modal-header">
+                <h2>Swap Request</h2>
+            </div>
+            <div class="swap-modal-body">
+                <div class="swap-comparison">
+                    <div class="item-preview">
+                        <img src="" alt="Target Item" class="target-item-img">
+                        <p class="target-item-name" style="font-weight: 600;"></p>
+                        <p class="target-item-value" style="color: #6f2c91; font-size: 14px;"></p>
+                    </div>
+                    <div class="swap-icon-mid">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="item-preview">
+                        <div class="select-your-item">
+                            <i class="fas fa-plus" style="font-size: 24px; margin-bottom: 10px; color: #aaa;"></i>
+                            <p style="font-size: 14px; color: #888;">Select your item to swap</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="confirm-swap-btn" onclick="confirmSwapRequest()">Confirm Swap Request</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="categories.js"></script>
+    <script src="your_listings.js"></script>
+</body>
+</html>
