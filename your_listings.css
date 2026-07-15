@@ -581,3 +581,201 @@
     color:white;
 
 }
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+
+    .banner-sec{
+        padding:50px 5% 35px;
+        text-align:center;
+    }
+
+    .banner-title{
+        font-size:32px;
+    }
+
+    .banner-subtitle{
+        font-size:15px;
+    }
+
+    .breadcrumbs ol{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .controls-bar{
+        flex-direction:column;
+        align-items:stretch;
+        padding:20px;
+    }
+
+    .sorting-options{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .sort-select,
+    .clear-all-btn{
+        width:100%;
+    }
+
+    .listings-dynamic-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+    }
+
+    .swap-card{
+        width:100%;
+    }
+
+    .card-header-asset{
+        height:220px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width:768px){
+
+    .banner-sec{
+        padding:40px 20px;
+        text-align:center;
+    }
+
+    .banner-title{
+        font-size:28px;
+    }
+
+    .banner-subtitle{
+        font-size:14px;
+    }
+
+    .listings-main-container{
+        padding:0 15px 50px;
+    }
+
+    .controls-bar{
+        padding:18px;
+    }
+
+    .sorting-options{
+        flex-direction:column;
+        align-items:stretch;
+        gap:12px;
+    }
+
+    .sort-label{
+        margin-bottom:2px;
+    }
+
+    .sort-select,
+    .clear-all-btn{
+        width:100%;
+    }
+
+    .listings-summary-count{
+        text-align:center;
+    }
+
+    .listings-dynamic-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .card-header-asset{
+        height:220px;
+    }
+
+    .card-details-body{
+        padding:18px;
+    }
+
+    .card-details-header{
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .card-item-price{
+        font-size:18px;
+    }
+
+    .card-item-attributes{
+        gap:6px;
+    }
+
+    .bottom-date-row{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:12px;
+    }
+
+    .card-simulation-panel{
+        flex-direction:column;
+    }
+
+    .action-simulate-btn{
+        width:100%;
+    }
+
+    .empty-state-wrapper{
+        padding:50px 20px;
+    }
+
+    .empty-state-icon{
+        font-size:48px;
+    }
+
+    .empty-state-wrapper h2{
+        font-size:22px;
+    }
+}
+
+
+/* Small Mobile */
+@media (max-width:480px){
+
+    .banner-title{
+        font-size:24px;
+    }
+
+    .banner-subtitle{
+        font-size:13px;
+    }
+
+    .card-header-asset{
+        height:190px;
+    }
+
+    .card-item-title{
+        font-size:17px;
+    }
+
+    .card-item-price{
+        font-size:16px;
+    }
+
+    .proposal-message-box{
+        font-size:12px;
+    }
+
+    .owner-indicator{
+        font-size:12px;
+    }
+
+    .status-badge{
+        font-size:10px;
+        padding:5px 10px;
+    }
+
+    .item-category-pill{
+        font-size:10px;
+    }
+
+    .browse-cta-btn{
+        width:100%;
+        text-align:center;
+    }
+}
