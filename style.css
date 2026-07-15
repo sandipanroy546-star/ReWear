@@ -622,21 +622,23 @@
 }
 
 .nav-links{
-    display: none;
+    display: none !important;
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: #fff;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     padding: 20px 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    z-index: 9999;
 }
 
 .nav-links.active{
-    display: flex;
+    display: flex !important;
 }
 
     .hero-sec{

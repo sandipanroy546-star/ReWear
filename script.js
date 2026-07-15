@@ -838,33 +838,44 @@ document.addEventListener(
     }
 
 );
-const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function () {
 
-mobileMenuBtn.addEventListener("click", () => {
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const navLinks = document.getElementById("nav-links");
 
-    navLinks.classList.toggle("active");
+    if (mobileMenuBtn && navLinks) {
 
-    const icon = mobileMenuBtn.querySelector("i");
+        mobileMenuBtn.addEventListener("click", function () {
 
-    if(navLinks.classList.contains("active")){
-        icon.classList.remove("fa-bars");
-        icon.classList.add("fa-times");
+            navLinks.classList.toggle("active");
+
+            const icon = mobileMenuBtn.querySelector("i");
+
+            if (navLinks.classList.contains("active")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.add("fa-times");
+            } else {
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-bars");
+            }
+
+        });
+
+        document.querySelectorAll(".nav-links a").forEach(link => {
+
+            link.addEventListener("click", function () {
+
+                navLinks.classList.remove("active");
+
+                const icon = mobileMenuBtn.querySelector("i");
+
+                icon.classList.remove("fa-times");
+                icon.classList.add("fa-bars");
+
+            });
+
+        });
+
     }
-    else{
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-    }
 
-});
-
-// Close menu when a link is clicked
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-
-        const icon = mobileMenuBtn.querySelector("i");
-        icon.classList.remove("fa-times");
-        icon.classList.add("fa-bars");
-    });
 });
